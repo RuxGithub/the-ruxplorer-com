@@ -1,0 +1,155 @@
+<head>
+  <style>
+    /* SECTIONS BELOW THE LANDING VIEW */
+    #landing-below {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+    }
+
+    #about-section {
+      background-color: beige;
+      overflow-x: hidden;
+    }
+    #about-content {
+    }
+    #this-is-ruxs {
+      font-family: "Lobster";
+      font-size: 2vw;
+      margin: 1vh 0;
+
+      align-self: flex-start;
+    }
+    #this-is-ruxs::after {
+      animation-name: wordChange;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+
+      display: inline-block;
+      content: "";
+      transition: all ease-in;
+    }
+
+    @keyframes wordChange {
+      0% {
+        content: "Rux's Playground";
+      }
+      14.2% {
+        content: "Rux's Sandbox";
+      }
+      28.4% {
+        content: "Rux's Backyard";
+      }
+      42.6% {
+        content: "Rux's Studio";
+      }
+      56.8% {
+        content: "Rux's Lab";
+      }
+      71% {
+        content: "Rux's Gym";
+      }
+      84% {
+        content: "Rux's Workshop";
+      }
+      100% {
+        content: "Ruxsplorer";
+      }
+    }
+
+    #about-side-top {
+      background-image: url("../images/grass_slope.png");
+      background-size: 100% 100%;
+      border-radius: 15%;
+      box-shadow: inset 0 0 10px 10px rgb(38, 63, 43);
+      transition: all 1s ease;
+      margin: 1vh 1vw;
+    }
+    #about-side-top:hover {
+      box-shadow: inset 0 0 15px 12px rgba(108, 158, 118, 0.832);
+    }
+    #about-side-top:hover #about-img {
+      animation-name: shred-down;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+    #about-img {
+      width: 50%;
+      /* box-shadow: -1px 1px 30px 0px rgba(191, 241, 249, 0.469); */
+      border-radius: 100%;
+    }
+    @keyframes shred-down {
+      from {
+        transform: translate(-4vw, -10vh) rotate(20deg);
+      }
+      15% {
+        transform: translate(-2vw, 2vh) rotate(20deg);
+      }
+      32% {
+        transform: translate(0vw, 4vh) rotate(-15deg);
+      }
+      51% {
+        transform: translate(8vw, 7vh) rotate(20deg);
+      }
+      72% {
+        transform: translate(16vw, 19vh) rotate(30deg);
+      }
+      85% {
+        transform: translate(20vw, 23vh) rotate(-20deg);
+      }
+      to {
+        transform: translate(40vw, 30vh) rotate(0deg);
+      }
+    }
+
+    #about-side-bottom {
+    }
+    #about-quote {
+    }
+  </style>
+</head>
+<div id="landing-below">
+  <div class="area-with-scrollbar">
+    <!-- Scrollbar specific to this section -->
+    <div class="custom-scrollbar-area">
+      <div class="custom-scrollbar">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+    </div>
+    <section class="phi-grid-layout" id="about-section">
+      <div class="phi-grid-content" id="about-content">
+        <h1 class="phi-content-title">Who's Rux?</h1>
+        <p class="phi-content">
+          Rux is an identity.<br />It was created to express the sides of a
+          person that they couldnt express otherwise <br />It was named after a
+          resemblance to a name and the resemblance of it's state of mind to the
+          meaning of
+          <a href="https://en.wiktionary.org/wiki/rux" target="_blank">rux</a
+          >.<br />Being driven by the curiosity and wonder about why things are,
+          how they work and how they are made, Rux came to explore them in a
+          vast range of topics that are believed to not work well together.<br />With
+          no real outlet or reason to apply what it found on the way, Rux
+          started working on them regardless of the reason other than the desire
+          to do so.<br />Between the complexity of not really existing and the
+          existing constraint of time, it started chipping away into the depths
+          of it's curiosity and bit by bit started to produce.<br />What it's
+          producing, it will share with you here.<br />Feel free to explore
+          alongside it.
+        </p>
+        <p id="this-is-ruxs">This is &nbsp</p>
+      </div>
+      <div class="phi-grid-side-top" id="about-side-top">
+        <img id="about-img" src="../images/Rux_Representative.png" />
+      </div>
+      <div class="phi-grid-side-bottom" id="about-side-bottom">
+        <hr />
+        <q id="about-quote"
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
+          architecto recusandae fuga iste rem molestias inventore facilis
+          possimus doloribus corporis repudiandae, autem assumenda dolores quod
+          laborum dicta rerum similique nesciunt?</q
+        >
+      </div>
+    </section>
+  </div>
+</div>

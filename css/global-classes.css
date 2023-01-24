@@ -1,0 +1,228 @@
+/* Top navigation bar global classes */
+.top-nav-link {
+    text-decoration: none;
+    font-family: "Righteous", cursive;
+    font-size: large;
+    color: black;
+    transition: all 1s;
+}
+.top-nav-link:hover {
+    text-decoration: underline dotted;
+    color: rgba(47, 42, 42, 0.764);
+    transform: scale(1.2);
+}
+/* Hero Landing Global Classes */
+.landing-icon {
+    width: 2vw;
+    height: 2vw;
+    transition: all 0.5s;
+}
+
+.landing-icon:hover {
+    transform: scale(1.4);
+}
+/* Classes for creating content area with a custom scrollbar */
+.area-with-scrollbar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    /* background-color: red; */
+}
+    /* Custom Scrollbar Animation */
+    .custom-scrollbar-area {
+        width: 2vw;
+        height: 100%;
+    }
+        .custom-scrollbar {
+            position: sticky;
+            top: 30vh;
+            height: 40vh;
+            width: 100%;
+            border-radius: 2vh;
+            background-color: rgba(247, 210, 162, 0.301);
+        }
+            /* Movement of scroll thumb with scroll should be achieved using js */
+            .custom-scrollbar-thumb {
+                width: 70%;
+                aspect-ratio: 1 / 1;
+                margin: 0 auto;
+                
+                border-radius: 50%;
+                border: 1px dashed black;
+                background-color: rgba(98, 185, 223, 0.801);
+                box-shadow: 0.2vw 0.2vh 10px;
+                
+            }
+    /* Classes created for having an area related to the scrollbar area that has a golden ratio distribution */
+    .phi-grid-layout {
+        width: 98vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 62.7% 37.3%;
+        grid-template-rows: 62.7% 37.3%;
+    }
+        .phi-grid-content {
+            grid-column: 1 / 1;
+            grid-row: 1 / 3;
+            
+            margin: 2vh 5vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            overflow: auto;
+        }
+            .phi-content-title {
+                font-family: "Rubik 80s Fade", cursive;
+                letter-spacing: 1vw;
+                font-size: 5vw;
+                text-align: center;
+                font-weight: 560;
+            }
+            .phi-content {
+                font-family: "Yeseva One", cursive;
+                letter-spacing: auto;
+                line-height: 4vh;
+                font-size: 1vw;
+                text-align: start;
+            }
+        .phi-grid-side-top {
+            grid-column: 2 / 2;
+            grid-row: 1 / 1;
+        }
+        .phi-grid-side-bottom {
+
+            grid-column: 2 / 2;
+            grid-row: 2 / 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+/* Topic showcase and horizontal scrollable items */
+
+.horizontal-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    column-gap: 3vw;
+    padding: 0 1vw 1vh 1vw;
+}
+.horizontal-scroll::-webkit-scrollbar {
+    /* height: 20px; */
+    /* display: none; */
+    height: 20px;
+    width: 100%;
+    background: #fff;
+    position: relative;
+    top: 0;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+    .horizontal-scroll-item {
+        flex: 0 0 auto;
+    }
+.topic-showcase-area {
+    height: 60vh;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+    .topic-showcase-header {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        font-family: "Yeseva One", cursive;
+        font-size: 5vh;
+    }
+    .topic-showcase {
+        width: 100%;
+        height: 70%;
+    }
+        .topic-card {
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 10vh;
+            box-shadow: inset 0px 2px 4px 1px rgb(83, 83, 83);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background-image: url("../images/grass_slope.png");
+            background-size: cover;
+        }
+            .topic-card-header {
+                width: 100%;
+                height: 33%;
+                background: linear-gradient(90deg, rgba(68, 68, 68, 0.75), rgba(145, 145, 145, 0.75), rgba(68, 68, 68, 0.75));
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                font-size: 4vh;
+                text-transform: uppercase;
+                font-family: "Yeseva One", cursive;
+                letter-spacing: 0.7vw;
+
+                opacity: 30%;
+
+                transition: all 0.2s ease-in;
+            }
+            .topic-card:hover .topic-card-header {
+                opacity: 90%;
+                box-shadow: 0 0 5px 2px rgba(76, 76, 76, 0.781);
+            }
+/* Footer global classes */
+.footer {
+    position: relative;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* z-index: 1; */
+}
+    .footer-logo {
+        height: 60%;
+        aspect-ratio: 1 / 1;
+        background-image: url("../logo/ruxplorer-logo-black.png");
+        background-size: cover;
+    }
+    .footer-sitenav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1vw;
+    }
+    .copyright {
+        height: 40%;
+        width: fit-content;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        column-gap: 10px;
+    }
+    .copyright-icon {
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        background-image: url("/icons/copyright-regular.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    

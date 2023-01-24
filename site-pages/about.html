@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Fetch the head content for the page -->
+    <script type="text/javascript">
+      // Fetch the external file
+      fetch("../html-snips/head-content.html")
+        .then((response) => response.text())
+        .then((data) => {
+          // Insert the contents of the external file into the head
+          document.head.innerHTML += data;
+        });
+    </script>
+    <!-- Give a title for the specific page and link necessary links -->
+    <title>About The Rux</title>
+
+    <!-- Fetch the html snip for the topnavigation along with the defined css properties using js -->
+    <script type="text/javascript">
+      fetch("../html-snips/top-navigation.html")
+        .then((response) => response.text())
+        .then((data) => {
+          let target = document.getElementById("top-navigation-bar-html");
+          target.innerHTML = data;
+        });
+    </script>
+
+    <!-- Fetch the html snip for the bottom part of the landing page along with the defined css properties using js -->
+    <script type="text/javascript">
+      fetch("../html-snips/landing-below.html")
+        .then((response) => response.text())
+        .then((data) => {
+          let target = document.getElementById("landing-about-html");
+          target.innerHTML = data;
+        });
+    </script>
+
+    <!-- Fetch the html snip for the topics showcase section along with the defined css properties using js -->
+    <script type="text/javascript">
+      fetch("../html-snips/topic-showcase.html")
+        .then((response) => response.text())
+        .then((data) => {
+          let target = document.getElementById("topics-showcase-html");
+          target.innerHTML = data;
+        });
+    </script>
+
+    <!-- Fetch the html snip for the footer along with the defined css properties using js -->
+    <script type="text/javascript">
+      fetch("../html-snips/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          let target = document.getElementById("footer-html");
+          target.innerHTML = data;
+        });
+    </script>
+  </head>
+
+  <body>
+    <!-- Elements inside the navigation bar to be placed at the top of all child pages -->
+    <div id="top-navigation-bar-html"></div>
+    <!-- The bottom section of the landing page that has the about section and various site navigation options -->
+    <div id="landing-about-html"></div>
+    <!-- Topics showcase scrollable area -->
+    <div id="topics-showcase-html"></div>
+    <!-- Footer -->
+    <div id="footer-html"></div>
+  </body>
+</html>
