@@ -225,4 +225,98 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
+/* Collection Page cglobal classes */
+.collection-page-container{
+    width: 100%;
+    padding: 0 1vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    
+}
+    .collection-page-side-bar{
+        height: 100%;
+        width: 20vw;
+        padding: 2vh 0;
+
+        position: sticky;
+        top: 0;
+    }
+        .side-bar-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            row-gap: 3vh;
+        }
+            .side-bar-list li {
+                height: auto;
+                max-height: 15vh;
+                
+                margin-left: 0.5vw;
+                text-align: start;
+
+                padding-top: 1vh;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-family: "Yeseva One", cursive;
+
+                transition: all 1s;
+
+                
+            }
+            .side-bar-list li:hover {
+                background-color: #33333333;
+                transform: scale(1.1);
+            }
+                .side-bar-list li p {
+                    text-align: center;
+                    font-size: 0.7rem;
+                    text-transform: uppercase;
+                    font-family: "Yeseva One", cursive;
+                }
+
+    .collection-page-content-area {
+        height: 100%;
+        width: 100%;
+        padding: 2vh 2vw;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:space-evenly;
+
+        gap: 5vh 5vw;
+    }
+        .collection-item {
+            height: 40vh;
+            aspect-ratio: 1.1 / 1;
+            border-radius: 10%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: -3px 2px 5px #333333;
+            border: 1px solid black;
+            
+            transition: all 1s;
+        }
+        .collection-item:hover {
+            box-shadow: -10px 5px 10px #555555;
+        }
+            .collection-item-header {                
+                width: 100%;
+                height: 20%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-family: "Yeseva One", cursive;
+                background: linear-gradient(90deg, rgba(68, 68, 68, 0.75), rgba(145, 145, 145, 0.75), rgba(68, 68, 68, 0.75));
+            }
+
     
